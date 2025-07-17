@@ -1,0 +1,7 @@
+torch 
+torchvision
+torchaudio
+fastapi
+uvicorn
+python-multipart
+laion-clap

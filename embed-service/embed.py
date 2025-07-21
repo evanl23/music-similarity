@@ -29,7 +29,7 @@ async def embed(file: UploadFile):
     embedding = model.get_audio_embedding_from_data(waveform_np) # Pass numpy array instead of tensor
     embedding_list = embedding.squeeze(0).tolist() # [1, D] -> [D]
 
-    return JSONResponse(content={"Embedding": embedding_list})
+    return JSONResponse(content={"Vector length:": len(embedding_list), "Embedding": embedding_list})
 
 @app.get("/health")
 def health():
